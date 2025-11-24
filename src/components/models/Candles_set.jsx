@@ -14,8 +14,7 @@ function Candles(props) {
 	const group = React.useRef();
 	const { nodes, materials, animations } = useGLTF("/models/candles_set.glb");
 	const { actions } = useAnimations(animations, group);
-
-	console.log(actions);
+	// console.log(actions);
 	useEffect(() => {
 		actions["Animation"].play();
 	}, [actions]);
