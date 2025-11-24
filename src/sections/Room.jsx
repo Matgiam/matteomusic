@@ -18,7 +18,7 @@ function Room() {
 	return (
 		<div style={{ width: "100vw", height: "100vh" }}>
 			<Canvas camera={{ position: [5, 1, 5], fov: 50 }}>
-				<OrbitControls target={[3, 1, 3]} />
+				<OrbitControls target={[3, 1, 3]} minPolarAngle={1.5} maxPolarAngle={1.5} />
 				<Lights />
 
 				{/* Room Walls */}
