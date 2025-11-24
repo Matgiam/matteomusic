@@ -12,7 +12,7 @@ import { useGraph } from '@react-three/fiber'
 import { useGLTF, useAnimations } from '@react-three/drei'
 import { SkeletonUtils } from 'three-stdlib'
 
-function Piano(props) {
+function Pianou(props) {
   const group = React.useRef()
   const { scene, animations } = useGLTF('/models/piano_animation.glb')
   const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene])
@@ -1480,4 +1480,4 @@ function Piano(props) {
 
 useGLTF.preload('/models/piano_animation.glb')
 
-export default Piano;
+export default Pianou;

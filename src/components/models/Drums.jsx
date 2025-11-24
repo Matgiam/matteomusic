@@ -18,10 +18,9 @@ function Drums(props) {
 	const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene]);
 	const { nodes, materials } = useGraph(clone);
 	const { actions } = useAnimations(animations, group);
-	console.log(actions);
-    useEffect(() => {
-      actions['Animation']?.play()
-    }, [actions])
+	useEffect(() => {
+		actions["Animation"]?.play();
+	}, [actions]);
 	return (
 		<group ref={group} {...props} dispose={null} scale={0.25}>
 			<group name="Sketchfab_Scene">
