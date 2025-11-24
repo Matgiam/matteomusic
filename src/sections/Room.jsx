@@ -6,6 +6,7 @@ import Lights from "../components/lights/Lights";
 import Guitar from "../components/models/Guitar";
 import Drums from "../components/models/Drums";
 import Piano from "../components/models/Piano";
+import Candles from "../components/models/Candles_set";
 
 function Room() {
 	return (
@@ -17,9 +18,10 @@ function Room() {
 				<MusicRoom position={[0, 0, 6.27]} rotation={[0, Math.PI / 2, 0]} />
 				<MusicRoom position={[6.27, 0, 6.27]} rotation={[0, Math.PI, 0]} />
 				<MusicRoom position={[6.27, 0, 0]} rotation={[0, 3.5 * Math.PI, 0]} />
-				<Piano position={[-2, 0.25, 1]} rotation={[0, Math.PI/4, 0]} />
+				<Piano position={[-2, 0.25, 1]} rotation={[0, Math.PI / 4, 0]} />
 				<Guitar position={[0.5, 0.2, 6]} rotation={[0, Math.PI, 0]} />
 				<Drums position={[5.5, 0.3, 1]} />
+				<Candles position={[2, 0.3, 1]} />
 			</Canvas>
 		</div>
 	);

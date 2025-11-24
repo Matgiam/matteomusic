@@ -19,7 +19,7 @@ function Drums(props) {
 	const { nodes, materials } = useGraph(clone);
 	const { actions } = useAnimations(animations, group);
 	useEffect(() => {
-		actions["Animation"]?.play();
+		actions["Animation"].play();
 	}, [actions]);
 	return (
 		<group ref={group} {...props} dispose={null} scale={0.25}>

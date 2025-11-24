@@ -18,9 +18,9 @@ function Piano(props) {
   const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene])
   const { nodes, materials } = useGraph(clone)
   const { actions } = useAnimations(animations, group)
-  console.log(actions);
+  // console.log(actions);
       useEffect(() => {
-        actions['Armature|mixamo.com|Layer0']?.play()
+        actions['Armature|mixamo.com|Layer0'].play()
       }, [actions])
   return (
     <group ref={group} {...props} dispose={null} scale={0.7}>
