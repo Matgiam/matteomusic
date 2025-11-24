@@ -18,7 +18,7 @@ function Piano(props) {
   const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene])
   const { nodes, materials } = useGraph(clone)
   const { actions } = useAnimations(animations, group)
-  console.log(actions);
+  // console.log(actions);
   useEffect(() => {
     actions['Take 001']?.play()
   }, [actions])
