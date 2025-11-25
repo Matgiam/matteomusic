@@ -28,12 +28,13 @@ import Cymbal from "../components/models/Cymbal";
 import Djembe from "../components/models/Djembe";
 import TvShelf from "../components/models/Tv_shelf";
 import Drumsticks from "../components/models/Drumsticks";
+import Board from "../components/models/Board";
 
 function Room() {
 	return (
 		<div style={{ width: "100vw", height: "100vh" }}>
 			<Canvas camera={{ position: [5, 1, 5], fov: 50 }}>
-				<OrbitControls target={[3, 1, 3]} minPolarAngle={1.5} maxPolarAngle={1.5} />
+				<OrbitControls target={[3, 1.5, 3]} minPolarAngle={1.5} maxPolarAngle={1.5} />
 				<Lights />
 				<Wood position={[2, 0.258, 3.3]} />
 				{/* Room Walls */}
@@ -42,7 +43,7 @@ function Room() {
 				<Piano position={[-2, 0.25, 1]} rotation={[0, Math.PI / 4, 0]} />
 				{/* Guitar */}
 				<Guitar position={[0.5, 0.2, 6]} rotation={[0, Math.PI, 0]} />
-				<GuitarAmp position={[2.5, 0.2, 8.2]} rotation={[0, Math.PI, 0]} />
+				<GuitarAmp position={[-2.4, 0.2, 6.1]} rotation={[0, Math.PI/1.5, 0]} />
 				<GuitarDeco position={[-2.7, 0.2, 7.8]} rotation={[0, Math.PI, 0]} />
 				<GuitarPoster position={[-2.95, 4.5, 6.3]} rotation={[0, 4.7, 0]} />
 				<GuitarStand position={[-2.5, 0.3, 4.5]} rotation={[0, Math.PI / 2, 0]} />
@@ -62,6 +63,7 @@ function Room() {
 				<Vinyl position={[8.5, 1, 5.5]} rotation={[0, Math.PI, 0]} />
 				<Vinyl position={[8.5, 0.4, 5.5]} rotation={[0, Math.PI, 0]} />
 				<VinylPlayer position={[8.5, 1.59, 5.7]} rotation={[0, Math.PI, 0]} /> *
+				<Board position={[5.7, 3.8, 8.9]} rotation={[0, -Math.PI, 0]} scale={0.05} />
 			</Canvas>
 		</div>
 	);
