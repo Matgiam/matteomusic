@@ -32,6 +32,7 @@ import Board from "../components/models/Board";
 import Plank from "../components/models/Plank";
 import Cd from "../components/models/Cd";
 import PianoShelf from "../components/models/PianoShelf";
+import HeadPhone from "../components/models/Headphone";
 
 function Room() {
 	return (
@@ -46,10 +47,12 @@ function Room() {
 				<Plank position={[0.5, 3.3, -2.6]} rotation={[0, -Math.PI / 1, 0]} />
 				<Cd position={[0.5, 3.35, -2.8]} rotation={[0, 0, 0]} />
 				<Piano position={[-2, 0.25, 1]} rotation={[0, Math.PI / 4, 0]} />
-				<PianoShelf position={[-2.5, 0.3,-2]} rotation={[0, 2 * Math.PI, 0]} />
+				<PianoShelf position={[-2.5, 0.3, -2]} rotation={[0, 2 * Math.PI, 0]} />
+				<HeadPhone position={[2, 1.85, -2.5]} rotation={[0, Math.PI / 1.2, 0]} />
+				<Vinyl position={[1, 1.85, -2.5]} rotation={[0, Math.PI / 2, 0]} />
 				{/* Guitar */}
 				<Guitar position={[0.5, 0.2, 6]} rotation={[0, Math.PI, 0]} />
-				<GuitarAmp position={[-2.4, 0.2, 6.1]} rotation={[0, Math.PI/1.5, 0]} />
+				<GuitarAmp position={[-2.4, 0.2, 6.1]} rotation={[0, Math.PI / 1.5, 0]} />
 				<GuitarDeco position={[-2.7, 0.2, 7.8]} rotation={[0, Math.PI, 0]} />
 				<GuitarPoster position={[-2.95, 4.5, 6.3]} rotation={[0, 4.7, 0]} />
 				<GuitarStand position={[-2.5, 0.3, 4.5]} rotation={[0, Math.PI / 2, 0]} />
@@ -57,7 +60,7 @@ function Room() {
 				<Cymbal position={[9.2, 3.2, 0.8]} rotation={[1.6, 0, 1.6]} />
 				<Djembe position={[8.5, 0.3, 2.5]} rotation={[0, Math.PI / 4, 0]} />
 				<TvShelf position={[5.8, 0.3, -2.2]} rotation={[0, Math.PI / 2, 0]} />
-				<Drumsticks position={[9, 3, -1.3]} rotation={[-1.4, Math.PI/2, 0]} />
+				<Drumsticks position={[9, 3, -1.3]} rotation={[-1.4, Math.PI / 2, 0]} />
 				{/* Candles */}
 				{/* <CandlesGroup positions={candlePositions} /> */}
 				{/* Animated Character */}
