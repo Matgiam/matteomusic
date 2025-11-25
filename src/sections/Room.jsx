@@ -18,6 +18,7 @@ import GuitarAmp from "../components/models/GuitarAmp";
 import GuitarDeco from "../components/models/GuitarDeco";
 import GuitarPoster from "../components/models/GuitarPoster";
 import Wood from "../components/models/Wood";
+import GuitarStand from "../components/models/GuitarStand";
 
 function Room() {
 	return (
@@ -25,7 +26,7 @@ function Room() {
 			<Canvas camera={{ position: [5, 1, 5], fov: 50 }}>
 				<OrbitControls target={[3, 1, 3]} minPolarAngle={1.5} maxPolarAngle={1.5} />
 				<Lights />
-				<Wood position={[2,0.258,3.3]}/>
+				<Wood position={[2, 0.258, 3.3]} />
 				{/* Room Walls */}
 				<MusicRoomGroup positions={MusicRoomPositions} rotations={MusicRoomRotations} />
 
@@ -34,13 +35,15 @@ function Room() {
 
 				{/* Guitar */}
 				<Guitar position={[0.5, 0.2, 6]} rotation={[0, Math.PI, 0]} />
-				<GuitarAmp position={[2.5, 0.2, 8.5]} rotation={[0, Math.PI, 0]} />
+				<GuitarAmp position={[2.5, 0.2, 8.2]} rotation={[0, Math.PI, 0]} />
 				<GuitarDeco position={[-2.7, 0.2, 7.8]} rotation={[0, Math.PI, 0]} />
 				<GuitarPoster position={[-2.95, 4.5, 6.3]} rotation={[0, 4.7, 0]} />
+				<GuitarStand position={[-2.5,0.3,4.5]} rotation={[0, Math.PI/2, 0]} />
+
 				<Drums position={[5.5, 0.3, 1]} />
 				<Mic position={[17.5, -19.85, 22.5]} />
 				{/* Candles */}
-				<CandlesGroup positions={candlePositions} />
+				{/* <CandlesGroup positions={candlePositions} /> */}
 
 				{/* Animated Character */}
 				<Singing position={[6, 0.3, 6]} />

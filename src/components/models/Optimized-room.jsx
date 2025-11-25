@@ -10,7 +10,7 @@ function MusicRoom(props) {
 	const { nodes, materials } = useGLTF("/models/optimized-room.glb");
 	return (
 		<group {...props} dispose={null}>
-
+			<mesh geometry={nodes._________6_blinn1_0.geometry} material={materials.blinn1} scale={1.1} position={[0.3,-0.6,0.3]} />
 			<mesh geometry={nodes.body1_blinn1_0.geometry} material={materials.blinn1} />
 			<mesh geometry={nodes.window_blinn1_0.geometry} material={materials.blinn1} />
 			<mesh geometry={nodes.window4_phong1_0.geometry} material={materials.phong1} />

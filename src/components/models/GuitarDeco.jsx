@@ -25,7 +25,7 @@ function GuitarDeco(props) {
 				<mesh
 					geometry={nodes.Bass001_Bass_0.geometry}
 					material={materials.Bass}
-					position={[-95.117, 62.791, -43.537]}
+					position={[-155.117, 62.791, -43.537]}
 					rotation={[-1.678, 0.019, 0]}
 					scale={100}
 				/>
