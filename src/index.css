@@ -45,9 +45,14 @@ p {
 		@apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-[50vw] flex justify-center items-center;
 	}
 }
-.discover-section{
+.discover-section {
 	@apply h-dvh;
+	background-color: #E83A00;
 }
 video {
-	filter: brightness(0.5); 
+	filter: brightness(0.5);
+}
+
+.room-section {
+	@apply h-dvh;
 }

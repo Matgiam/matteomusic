@@ -13,7 +13,7 @@ import { useGLTF } from "@react-three/drei";
 function Wood(props) {
 	const { nodes, materials } = useGLTF("/models/wood.glb");
 	return (
-		<group {...props} dispose={null} scale={3.3}>
+		<group {...props} dispose={null} scale={1.8}>
 			<mesh geometry={nodes.Plane_1.geometry} material={materials["Material.001"]} rotation={[-Math.PI / 2, 0, 0]} />
 		</group>
 	);

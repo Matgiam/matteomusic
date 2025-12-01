@@ -2,45 +2,48 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 
 // Models
-import MusicRoom from "../components/models/Optimized-room";
-import Guitar from "../components/models/Guitar";
-import Drums from "../components/models/Drums";
-import Piano from "../components/models/Piano";
-import Singing from "../components/models/Singing";
-import CandlesGroup from "../components/Group/CandlesGroup";
+import MusicRoom from "./models/Optimized-room";
+import Guitar from "./models/Guitar";
+import Drums from "./models/Drums";
+import Piano from "./models/Piano";
+import Singing from "./models/Singing";
+import CandlesGroup from "./Group/CandlesGroup";
 
 // Lights + Constants
-import Lights from "../components/lights/Lights";
+import Lights from "./lights/Lights";
 import { candlePositions, MusicRoomPositions, MusicRoomRotations } from "../constants";
-import MusicRoomGroup from "../components/Group/MusicRoomGroup";
-import Mic from "../components/models/Microphone";
-import GuitarAmp from "../components/models/GuitarAmp";
-import GuitarDeco from "../components/models/GuitarDeco";
-import GuitarPoster from "../components/models/GuitarPoster";
-import Wood from "../components/models/Wood";
-import GuitarStand from "../components/models/GuitarStand";
-import Synth from "../components/models/Synth";
-import Shelf from "../components/models/Shelf";
-import Couch from "../components/models/Couch";
-import Vinyl from "../components/models/Vinyl";
-import VinylPlayer from "../components/models/VinylPlayer";
-import Cymbal from "../components/models/Cymbal";
-import Djembe from "../components/models/Djembe";
-import TvShelf from "../components/models/Tv_shelf";
-import Drumsticks from "../components/models/Drumsticks";
-import Board from "../components/models/Board";
-import Plank from "../components/models/Plank";
-import Cd from "../components/models/Cd";
-import PianoShelf from "../components/models/PianoShelf";
-import HeadPhone from "../components/models/Headphone";
+import MusicRoomGroup from "./Group/MusicRoomGroup";
+import Mic from "./models/Microphone";
+import GuitarAmp from "./models/GuitarAmp";
+import GuitarDeco from "./models/GuitarDeco";
+import GuitarPoster from "./models/GuitarPoster";
+import Wood from "./models/Wood";
+import GuitarStand from "./models/GuitarStand";
+import Synth from "./models/Synth";
+import Shelf from "./models/Shelf";
+import Couch from "./models/Couch";
+import Vinyl from "./models/Vinyl";
+import VinylPlayer from "./models/VinylPlayer";
+import Cymbal from "./models/Cymbal";
+import Djembe from "./models/Djembe";
+import TvShelf from "./models/Tv_shelf";
+import Drumsticks from "./models/Drumsticks";
+import Board from "./models/Board";
+import Plank from "./models/Plank";
+import Cd from "./models/Cd";
+import PianoShelf from "./models/PianoShelf";
+import HeadPhone from "./models/Headphone";
 
 function Room() {
 	return (
-		<div style={{ width: "100vw", height: "100vh" }}>
+		<div style={{ width: "60vw", height: "70vh" }}>
 			<Canvas camera={{ position: [5, 1, 5], fov: 50 }}>
-				<OrbitControls target={[3, 1.5, 3]} minPolarAngle={1.5} maxPolarAngle={1.5} enableZoom={false} enablePan={false} />
+				{/* <OrbitControls target={[3, 1.5, 3]} minPolarAngle={1.5} maxPolarAngle={1.5} enableZoom={false} enablePan={false} /> */}
+				<OrbitControls target={[3, 13.5, 3]} minPolarAngle={0} maxPolarAngle={0} enableZoom={false} enablePan={false} />
 				<Lights />
-				<Wood position={[2, 0.258, 3.3]} />
+				<Wood position={[2.6, 0.258, 3.3]} />
+				<Wood position={[2.6, 0.26, 5]} />
+				<Wood position={[2.6, 0.262, -1]} />
 				{/* Room Walls */}
 				<MusicRoomGroup positions={MusicRoomPositions} rotations={MusicRoomRotations} />
 				{/* Piano */}
