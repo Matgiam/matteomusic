@@ -9,13 +9,13 @@ function HomeSection() {
 					<p>Passionate musician that loves to create music</p>
 				</div>
 				<div className="">
-					<img src="public/images/matteo_back.png" alt="" className="w-full h-[100vh] object-cover" />
+					<img src="/images/matteo_back.png" alt="" className="w-full h-[100vh] object-cover" />
 				</div>
 			</div>
 			<div className="absolute right-20 top-1/2 transform -translate-y-1/2 flex flex-col gap-6 z-20">
-				<img src="public/icons/instagram.webp" alt="Instagram" className="w-8 h-8" />
-				<img src="public/icons/spotify.png" alt="Spotify" className="w-8 h-8" />
-				<img src="public/icons/youtube.webp" alt="YouTube" className="w-8 h-8" />
+				<img src="/icons/instagram.webp" alt="Instagram" className="w-8 h-8" />
+				<img src="/icons/spotify.png" alt="Spotify" className="w-8 h-8" />
+				<img src="/icons/youtube.webp" alt="YouTube" className="w-8 h-8" />
 			</div>
 		</section>
 	);

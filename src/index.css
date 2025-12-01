@@ -20,13 +20,32 @@ h1 {
 }
 
 h2 {
+	font-size: 2.5em;
+	line-height: 1.1;
+}
+
+p {
 	font-size: 1.5em;
 	line-height: 1.1;
 }
 
 .about-section {
 	/* background: radial-gradient(108.85% 98.01% at 19.72% 78.17%, #9b120a 17.79%, #e83a00 71.15%, #ff6501 100%); */
-	background-color:  #510000;
+	background-color: #510000;
 	position: relative;
 	z-index: 10;
+}
+
+.vd-pin-section {
+	@apply h-dvh overflow-hidden md:!-translate-y-[0%] md:mt-0 mt-20;
+	video {
+		@apply size-full absolute inset-0 object-cover;
+	}
+	.vd-section-text {
+		@apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-[50vw] flex justify-center items-center;
+	}
+}
+
+video {
+	filter: brightness(0.5); 
 }
