@@ -1,12 +1,13 @@
 import { useState } from "react";
 import Room from "./sections/Room";
-
+import HomeSection from "./sections/HomeSection";
+import "./index.css"
 function App() {
-	const [count, setCount] = useState(0);
 
 	return (
 		<>
-			<Room />
+			{/* <Room /> */}
+			<HomeSection />
 		</>
 	);
 }

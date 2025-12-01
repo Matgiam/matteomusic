@@ -38,7 +38,7 @@ function Room() {
 	return (
 		<div style={{ width: "100vw", height: "100vh" }}>
 			<Canvas camera={{ position: [5, 1, 5], fov: 50 }}>
-				<OrbitControls target={[3, 1.5, 3]} minPolarAngle={1.5} maxPolarAngle={1.5} enableZoom={true} enablePan={true} />
+				<OrbitControls target={[3, 1.5, 3]} minPolarAngle={1.5} maxPolarAngle={1.5} enableZoom={false} enablePan={false} />
 				<Lights />
 				<Wood position={[2, 0.258, 3.3]} />
 				{/* Room Walls */}
@@ -61,8 +61,6 @@ function Room() {
 				<Djembe position={[8.5, 0.3, 2.5]} rotation={[0, Math.PI / 4, 0]} />
 				<TvShelf position={[5.8, 0.3, -2.2]} rotation={[0, Math.PI / 2, 0]} />
 				<Drumsticks position={[9, 3, -1.3]} rotation={[-1.4, Math.PI / 2, 0]} />
-				{/* Candles */}
-				{/* <CandlesGroup positions={candlePositions} /> */}
 				{/* Animated Character */}
 				<Singing position={[6, 0.3, 5]} />
 				<Mic position={[17.5, -19.85, 22.5]} />
