@@ -10,7 +10,6 @@ import RoomSection from "./sections/RoomSection";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-
 function App() {
 	useGSAP(() => {
 		ScrollSmoother.create({
@@ -26,7 +25,7 @@ function App() {
 					<AboutSection />
 					<VideoSection />
 					<DiscoverSection />
-					<RoomSection />
+					{/* <RoomSection /> */}
 					{/* <Room /> */}
 				</div>
 			</div>

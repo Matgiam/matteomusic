@@ -10,7 +10,7 @@ Title: Solar Impulse Flight Path
 import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
- function Globe(props) {
+function Globe(props) {
   const { nodes, materials } = useGLTF('/models/globe.glb')
   return (
     <group {...props} dispose={null}>
