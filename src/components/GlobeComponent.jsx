@@ -1,6 +1,6 @@
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import Globe from "./models/Globe";
+import Globe from "./models/decorations/Globe";
 import { useRef } from "react";
 
 function RotatingGlobe() {

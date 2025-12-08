@@ -1,4 +1,4 @@
-import Candles from "../models/Candles_set";
+import Candles from "../models/decorations/Candles_set";
 
 function CandlesGroup({ positions }) {
   return positions.map((pos, index) => (

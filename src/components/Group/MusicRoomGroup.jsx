@@ -1,4 +1,4 @@
-import MusicRoom from "../models/Optimized-room";
+import MusicRoom from "../models/room/Optimized-room";
 
 
 function MusicRoomGroup({ positions, rotations }) {
