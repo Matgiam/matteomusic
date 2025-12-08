@@ -1,72 +1,42 @@
-import { useRef } from "react";
+import Room from "../components/Room";
 import { useGSAP } from "@gsap/react";
-import GlobeComponent from "../components/GlobeComponent";
 import gsap from "gsap";
+import { SplitText } from "gsap/all";
 function DiscoverSection() {
-	const container = useRef(null);
-
 	useGSAP(() => {
-		const tl = gsap.timeline({
+		const roomChars = new SplitText(".room-section h1", { type: "chars" });
+		gsap.from(roomChars.chars, {
+			yPercent: 30,
+			opacity: 0,
+			stagger: 0.22,
 			scrollTrigger: {
-				trigger: ".discover-section",
-				start: "-10% 20%",
-				end: "bottom top",
-				scrub: 1.5,
-				// markers: true,
+				trigger: ".room-section h1",
+				start: "top 80%",
+				end: "bottom 50%",
+				markers: true,
+				scrub: true,
 			},
 		});
-		tl.to(
-			".first",
-			{
-				xPercent: -80,
-				rotate: -15,
-			},
-			"<"
-		);
 
-		tl.to(
-			".second",
-			{
-				xPercent: -40,
-				rotate: -8,
-			},
-			"<"
-		);
-		tl.to(
-			".third",
-			{
-				xPercent: 40,
-				rotate: 10,
-			},
-			"<"
-		);
-		tl.to(
-			".fourth",
-			{
-				xPercent: 80,
-				rotate: 15,
-			},
-			"<"
-		);
+		// Arrow bounce animation
+		gsap.to(".arrow-down", {
+			y: 50,
+			duration: 1,
+			repeat: -1,
+			yoyo: true,
+			ease: "power1.inOut",
+		});
 	});
 
 	return (
-		<section ref={container} className="discover-section overflow-hidden">
-			<div className="flex justify-around items-center h-full">
-				<div className="flex-col ml-100 text-center relative z-10">
-					<div className="text font-bold text-6xl">
-						{/* Added block display to ensure transforms work correctly */}
-						<h1 className="first inline-block">Want</h1>
-						<br />
-						<h2 className="second inline-block">to discover</h2>
-						<br />
-						<h2 className="third inline-block">my </h2>
-						<br />
-						<h2 className="fourth inline-block">world ? </h2>
-					</div>
+		<section className="room-section">
+			<div className="flex flex-col justify-center items-center h-full gap-20">
+				<h1 className="">Discover it here</h1>
+				<div className="arrow-down">
+					<svg width="80" height="80" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M15 20L8 13L9.4 11.6L15 17.2L20.6 11.6L22 13L15 20Z" fill="currentColor"/>
+					</svg>
 				</div>
-
-				<GlobeComponent />
 			</div>
 		</section>
 	);

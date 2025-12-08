@@ -6,9 +6,9 @@ import { ScrollTrigger, ScrollSmoother, SplitText } from "gsap/all";
 import AboutSection from "./sections/AboutSection";
 import VideoSection from "./sections/VideoSection";
 import DiscoverSection from "./sections/DiscoverSection";
-import RoomSection from "./sections/RoomSection";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import WorldSection from "./sections/WorldSection";
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 function App() {
 	useGSAP(() => {
@@ -24,9 +24,9 @@ function App() {
 					<HomeSection />
 					<AboutSection />
 					<VideoSection />
+					<WorldSection />
 					<DiscoverSection />
-					<RoomSection />
-					{/* <Room /> */}
+					<Room />
 				</div>
 			</div>
 		</>
