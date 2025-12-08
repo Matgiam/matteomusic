@@ -19,6 +19,7 @@ import Wood from "./models/room/Wood";
 // Lights + Constants
 import Lights from "./lights/Lights";
 import { candlePositions, MusicRoomPositions, MusicRoomRotations } from "../constants";
+import { useGSAP } from "@gsap/react";
 
 function Room() {
 	const [controlsConfig, setControlsConfig] = useState({
