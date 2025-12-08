@@ -47,7 +47,7 @@ p {
 }
 .discover-section {
 	@apply h-dvh;
-	background-color: #E83A00;
+	background-color: #e83a00;
 }
 video {
 	filter: brightness(0.5);

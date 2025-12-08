@@ -7,17 +7,22 @@ Source: https://sketchfab.com/3d-models/drum-scanned-model-e07b01dad6144d1c9b17a
 Title: Drum, Scanned Model
 */
 
-import React from 'react'
-import { useGLTF } from '@react-three/drei'
+import React from "react";
+import { useGLTF } from "@react-three/drei";
+import * as THREE from "three";
 
 function Djembe(props) {
-  const { nodes, materials } = useGLTF('/models/djembe.glb')
-  return (
-    <group {...props} dispose={null} scale={0.08}>
-      <mesh geometry={nodes.Baraban_Low_poly_Textured_Baraban_Low_poly_Textured1001_0.geometry} material={materials['Baraban_Low_poly_Textured.1001']} rotation={[-Math.PI / 2, 0, 0]} />
-    </group>
-  )
+	const { nodes, materials } = useGLTF("/models/djembe.glb");
+	return (
+		<group {...props} dispose={null} scale={0.08}>
+			<mesh
+				geometry={nodes.Baraban_Low_poly_Textured_Baraban_Low_poly_Textured1001_0.geometry}
+				material={materials["Baraban_Low_poly_Textured.1001"]}
+				rotation={[-Math.PI / 2, 0, 0]}
+			/>
+		</group>
+	);
 }
 
-useGLTF.preload('/models/djembe.glb')
+useGLTF.preload("/models/djembe.glb");
 export default Djembe;

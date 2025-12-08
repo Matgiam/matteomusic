@@ -22,7 +22,6 @@ function AboutSection() {
 			stagger: 2.5,
 			yPercent: 20,
 			duration: 5.2,
-			scrub: true,
 			scrollTrigger: {
 				trigger: ".about-section",
 				start: "20% 70%",
