@@ -21,10 +21,10 @@ function App() {
 		<>
 			<div id="smooth-wrapper">
 				<div id="smooth-content">
-					<HomeSection />
+					{/* <HomeSection />
 					<AboutSection />
 					<VideoSection />
-					<DiscoverSection />
+					<DiscoverSection /> */}
 					<RoomSection />
 					{/* <Room /> */}
 				</div>

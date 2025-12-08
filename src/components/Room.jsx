@@ -19,8 +19,13 @@ import Wood from "./models/room/Wood";
 // Lights + Constants
 import Lights from "./lights/Lights";
 import { candlePositions, MusicRoomPositions, MusicRoomRotations } from "../constants";
+import { useGSAP } from "@gsap/react";
 
 function Room() {
+
+	useGSAP(()=>{
+
+	})
 	return (
 		<div style={{ width: "60vw", height: "70vh" }}>
 			<Canvas camera={{ position: [5, 1, 5], fov: 50 }}>
@@ -30,22 +35,22 @@ function Room() {
 				<Wood position={[2.6, 0.258, 3.3]} />
 				<Wood position={[2.6, 0.26, 5]} />
 				<Wood position={[2.6, 0.262, -1]} />
-				
+
 				{/* Room Structure */}
 				<MusicRoomGroup positions={MusicRoomPositions} rotations={MusicRoomRotations} />
-				
+
 				{/* Piano Area */}
 				<PianoGroup />
-				
+
 				{/* Guitar Area */}
 				<GuitarGroup />
-				
+
 				{/* Drums Area */}
 				<DrumsGroup />
-				
+
 				{/* Furniture & Electronics */}
 				<FurnitureGroup />
-				
+
 				{/* Character */}
 				<CharacterGroup />
 			</Canvas>

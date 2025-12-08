@@ -13,7 +13,7 @@ function RoomSection() {
 				trigger: ".room-section h1",
 				start: "top 80%",
 				end: "bottom 50%",
-				markers: true,
+				// markers: true,
 				scrub: true,
 			},
 		});
