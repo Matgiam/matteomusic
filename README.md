@@ -1,16 +1,104 @@
-# React + Vite
+# Matteo Music Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An immersive 3D music portfolio website showcasing musical instruments and interactive experiences built with React Three Fiber and GSAP.
 
-Currently, two official plugins are available:
+## 🎵 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Interactive 3D Room**: Explore a virtual music room with various instruments
+- **Smooth Animations**: Powered by GSAP for seamless scrolling and transitions
+- **Multiple Sections**: Home, About, Video, World, and Discover sections
+- **3D Models**: Detailed 3D models of instruments including:
+  - Piano and Grand Piano
+  - Guitar and accessories
+  - Drums and drumsticks
+  - Microphone and headphones
+  - Vinyl player and records
+  - And much more!
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend**: React 19.2.0
+- **3D Graphics**: Three.js, React Three Fiber, React Three Drei
+- **Animations**: GSAP with React integration
+- **Styling**: Tailwind CSS
+- **Build Tool**: Vite
+- **Post-processing**: React Three Postprocessing
 
-## Expanding the ESLint configuration
+## 🚀 Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- Node.js (v18 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd matteomusic
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Start the development server:
+```bash
+npm run dev
+```
+
+4. Open your browser and navigate to `http://localhost:5173`
+
+### Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+
+## 📁 Project Structure
+
+```
+src/
+├── components/
+│   ├── Group/           # Instrument group components
+│   ├── lights/          # Lighting setup
+│   ├── models/          # 3D model components
+│   ├── GlobeComponent.jsx
+│   └── Room.jsx
+├── sections/            # Page sections
+│   ├── AboutSection.jsx
+│   ├── DiscoverSection.jsx
+│   ├── HomeSection.jsx
+│   ├── RoomSection.jsx
+│   ├── VideoSection.jsx
+│   └── WorldSection.jsx
+├── constants/
+│   └── index.js         # Constants and configurations
+├── App.jsx              # Main application component
+├── main.jsx             # Application entry point
+└── index.css            # Global styles
+
+public/
+├── models/              # 3D model files (.glb)
+├── images/              # Static images
+├── icons/               # Icon files
+├── sounds/              # Audio files
+└── videos/              # Video content
+```
+
+## 🎨 Components Overview
+
+### 3D Room Components
+- **Room.jsx**: Main 3D room container
+- **GlobeComponent.jsx**: Interactive globe element
+- **Group Components**: Organized 3D instrument groups (Drums, Guitar, Piano, etc.)
+
+### Section Components
+- **HomeSection**: Landing section with introduction
+- **AboutSection**: Information about the artist
+- **VideoSection**: Video showcase
+- **WorldSection**: Interactive 3D world experience
+- **DiscoverSection**: Music discovery features
